@@ -92,8 +92,6 @@ spring:
     jpa:
       repositories:
         bootstrap-mode: deferred
-  liquibase:
-    enabled: false
   jpa:
     open-in-view: false
     properties:
