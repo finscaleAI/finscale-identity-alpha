@@ -6,6 +6,7 @@ import java.net.InetAddress
 import java.net.UnknownHostException
 import javax.annotation.PostConstruct
 import org.muellners.finscale.identity.config.ApplicationProperties
+import org.muellners.finscale.multitenancy.EnableMultitenancy
 import org.slf4j.LoggerFactory
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties
@@ -15,6 +16,7 @@ import org.springframework.core.env.Environment
 
 @SpringBootApplication
 @EnableConfigurationProperties(LiquibaseProperties::class, ApplicationProperties::class)
+@EnableMultitenancy
 class IdentityApp(private val env: Environment) {
 
     private val log = LoggerFactory.getLogger(javaClass)
